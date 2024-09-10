@@ -1,0 +1,193 @@
+### Get engagements data
+GET http://localhost:4004/odata/v4/db/EngagementsData
+
+### Get engagements data with status
+GET http://localhost:4004/odata/v4/db/EngagementsData?$select=name,status,country
+
+### Get all data
+GET http://localhost:4004/odata/v4/db/EngagementsData?$expand=proposal,phases($expand=deliverables($expand=activities,tools))
+
+### Get single engagement
+GET http://localhost:4004/odata/v4/db/EngagementsData(ID=7f4e7a58-f4c4-4cde-8e63-579d207e4e51)?$expand=users
+
+###
+GET http://localhost:4004/odata/v4/db/EngagementsData?$expand=proposal,phases($expand=deliverables)
+
+### Get phase data
+GET http://localhost:4004/odata/v4/db/PhasesData
+
+###
+POST http://localhost:4004/odata/v4/db/EngagementsData
+Content-Type: application/json
+
+{
+  "name": "Engagement 1",
+  "type": "Type A",
+  "status": "Active",
+  "country": "Country X",
+  "serviceLine": "SAP"
+}
+
+###
+POST http://localhost:4004/odata/v4/db/EngagementsData
+Content-Type: application/json
+
+{
+  "name": "Nik1e",
+  "type": "Funding Service",
+  "country": "United States",
+  "serviceLine": "SAP",
+  "proposal": {
+        "client": "Client Name",
+        "sector": "Sector",
+        "region": "Region",
+        "industry": "Industry",
+        "stage": "Stage",
+        "scope": "Scope",
+        "problemStatement": "Problem Statement",
+        "businessValue": "Business Value"
+    }
+}
+
+###
+PATCH http://localhost:4004/odata/v4/db/EngagementsData(ID=35b1e35d-dafd-42bf-8935-b5c17fb114f3)
+Content-Type: application/json
+
+{
+  "proposal": {
+        "client": "Client Name",
+        "sector": "Sector",
+        "region": "Region",
+        "industry": "Industry",
+        "stage": "Stage",
+        "scope": "Scope",
+        "problemStatement": "Problem Statement",
+        "businessValue": "Business Value"
+    }
+}
+
+###
+POST http://localhost:4004/odata/v4/db/UpdateEngagementDetails
+Content-Type: application/json
+
+{
+  "engagementID": "21b385e9-cfff-44c6-beaa-0322161c126c"
+}
+
+###
+POST http://localhost:4004/odata/v4/db/ConfirmPhase
+Content-Type: application/json
+
+{
+  "engagementID": "1cd7cba6-4e7f-4ce5-b112-755668b2579d"
+}
+
+###
+POST http://localhost:4004/odata/v4/db/activateNextPhase
+Content-Type: application/json
+
+{
+  "engagementID": "1cd7cba6-4e7f-4ce5-b112-755668b2579d"
+}
+
+###
+POST http://localhost:4004/odata/v4/db/PhaseCatalog
+Content-Type: application/json
+
+{
+  "rank" : 9,
+  "phase" : "test",
+  "deliverables": [
+    {
+      "deliverable" : "Deliverable1",
+      "activities" : [
+        {
+          "activity" : "Activity1"
+        },
+        {
+          "activity" : "Activity2"
+        }
+      ],
+      "tools" : [
+        {
+          "tool" : "Tool1"
+        },
+        {
+          "tool" : "Tool2"
+        }
+      ]
+    },
+    {
+      "deliverable" : "Deliverable2"
+    }
+  ] 
+}
+
+###
+GET http://localhost:4004/odata/v4/db/PhaseCatalog(ID=550e8400-e29b-41d4-a716-446655440000)
+
+
+###
+PATCH http://localhost:4004/odata/v4/db/PhaseCatalog(ID=550e8400-e29b-41d4-a716-446655440000)
+Content-Type: application/json
+
+{
+  "phase" : "Discover patch",
+  "deliverables": [
+    {
+      "deliverable" : "Deliverable1",
+      "activities" : [
+        {
+          "activity" : "Activity1"
+        },
+        {
+          "activity" : "Activity2"
+        }
+      ],
+      "tools" : [
+        {
+          "tool" : "Tool1"
+        },
+        {
+          "tool" : "Tool2"
+        }
+      ]
+    },
+    {
+      "deliverable" : "Deliverable2"
+    }
+  ] 
+}
+
+###
+POST http://localhost:4004/odata/v4/db/updateProvisionedTool
+Content-Type: application/json
+
+{
+  "engagementNumber": "EN00000001",
+  "tool": "ADO",
+  "link": "test1.com"
+}
+
+###
+GET http://localhost:4004/odata/v4/db/DeliverablesData(ID=a7f4e7a5-4c4c-4cde-8e63-579d207e4e53)
+
+###
+PATCH http://localhost:4004/odata/v4/db/DeliverablesData(ID=20a29f8b-22ad-43fb-8f3e-640173fc62bf)
+Content-Type: application/json
+
+{
+  "isSelected": true
+}
+
+###
+POST http://localhost:4004/odata/v4/db/UsersData
+Content-Type: application/json
+
+{
+    
+    "user_name": "Test User",
+    "user_email": "test@ey.com",
+    "engagement_ID": "7f4e7a58-f4c4-4cde-8e63-579d207e4e51"
+
+}

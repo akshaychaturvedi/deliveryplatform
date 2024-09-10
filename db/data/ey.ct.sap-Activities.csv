@@ -1,0 +1,6 @@
+ID,activity,deliverable_ID,createdAt,createdBy,modifiedAt,modifiedBy
+e3b0c442-98fc-1c14-9c75-6f1d4a61c9dc,Activity A,e3b0c442-98fc-1c14-9c75-6f1d4a61c9da,2024-08-01T10:00:00Z,UserA,2024-08-10T12:00:00Z,UserB
+a7f4e7a5-4c4c-4cde-8e63-579d207e4e54,Activity B,e3b0c442-98fc-1c14-9c75-6f1d4a61c9da,2024-08-02T11:00:00Z,UserC,2024-08-12T13:00:00Z,UserD
+b4cc5e7a-c9e1-40cf-94c1-8d5be13d183b,Activity C,a7f4e7a5-4c4c-4cde-8e63-579d207e4e53,2024-08-03T09:00:00Z,UserE,2024-08-13T14:00:00Z,UserF
+d9a6638d-6e52-4bfc-80d7-7e0d7f1c1d50,Activity D,b4cc5e7a-c9e1-40cf-94c1-8d5be13d183a,2024-08-04T08:00:00Z,UserG,2024-08-14T15:00:00Z,UserH
+e4b0c442-98fc-1c14-9c75-6f1d4a61c9dd,Activity E,d9a6638d-6e52-4bfc-80d7-7e0d7f1c1d49,2024-08-05T07:00:00Z,UserI,2024-08-15T16:00:00Z,UserJ

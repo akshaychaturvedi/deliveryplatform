@@ -1,0 +1,5 @@
+ID,number,name,type,status,country,phase,phaseStep,serviceLine,createdAt,createdBy,modifiedAt,modifiedBy,proposal_ID
+e3b0c442-98fc-1c14-9c75-6f1d4a61c9d8,EN00000001,Engagement A,Type1,Active,Country1,Phase1,Step1,SAP,2024-08-01T10:00:00Z,UserA,2024-08-10T12:00:00Z,UserB,e3b0c442-98fc-1c14-9c75-6f1d4a61c9d8
+7f4e7a58-f4c4-4cde-8e63-579d207e4e51,EN00000002,Engagement B,Type2,Draft,Country2,Phase2,Step2,SAP,2024-08-02T11:00:00Z,UserC,2024-08-12T13:00:00Z,UserD
+b4cc5e7a-c9e1-40cf-94c1-8d5be13d1837,EN00000003,Engagement C,Type1,Closed,Country3,Phase1,Step1,SAP,2024-08-03T09:00:00Z,UserE,2024-08-13T14:00:00Z,UserF
+d9a6638d-6e52-4bfc-80d7-7e0d7f1c1d46,EN00000004,Engagement D,Type3,Awaiting,Country1,Phase3,Step3,SAP,2024-08-04T08:00:00Z,UserG,2024-08-14T15:00:00Z,UserH
